@@ -16,21 +16,21 @@ class ItemAdapter(
 
     //view holder yang digunakan unutk menyimpan referensi layout item
     class BukuAdapterHolder(view: View) : RecyclerView.ViewHolder(view){
-        val imgMenuDoctor: ImageView = itemView.findViewById(R.id.imgMenu)
-        val txtNamaDoctor: TextView = itemView.findViewById(R.id.tvNamaMenu)
-        val txtBidang: TextView = itemView.findViewById(R.id.tvTanggal)
-        val txtRating: TextView = itemView.findViewById(R.id.tvharga)
-        val txtAngkaRating: TextView = itemView.findViewById(R.id.tvItems)
+        val imgMenu: ImageView = itemView.findViewById(R.id.imgMenu)
+        val txtNamaMenu: TextView = itemView.findViewById(R.id.tvNamaMenu)
+        val txtTanggal: TextView = itemView.findViewById(R.id.tvTanggal)
+        val txtharga: TextView = itemView.findViewById(R.id.tvharga)
+        val txtItems: TextView = itemView.findViewById(R.id.tvItems)
     }
 
     //pengaturan data item pada setiap list dari recycle view
     override fun onBindViewHolder(holder: BukuAdapterHolder, position: Int) {
         val currentItem = itemOrder[position]
-        holder.imgMenuDoctor.setImageResource(currentItem.imageMenu)
-        holder.txtNamaDoctor.setText(currentItem.namaMenu)
-        holder.txtBidang.setText(currentItem.Tanggal)
-        holder.txtRating.setText(currentItem.Harga)
-        holder.txtAngkaRating.setText(currentItem.totalItem)
+        holder.imgMenu.setImageResource(currentItem.imageMenu)
+        holder.txtNamaMenu.setText(currentItem.namaMenu)
+        holder.txtTanggal.setText(currentItem.Tanggal)
+        holder.txtharga.setText(currentItem.Harga)
+        holder.txtItems.setText(currentItem.totalItem)
     }
 
     //membuat layout list item sebagai item dari recycle view
