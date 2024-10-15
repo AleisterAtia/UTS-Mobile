@@ -24,14 +24,14 @@ class Order : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.rvOrder)
         //ini kita bikin array data
-        val listBuku = listOf(
+        val listItem = listOf(
             ItemModel(namaMenu = "Chicken Curry", R.drawable.curry, "29 Nov, 01:20 PM", "$50.50", "5 items"),
             ItemModel(namaMenu = "Burger", R.drawable.burger, "08 Maret, 01:20 PM", "$100.50", "10 items"),
             ItemModel(namaMenu = "Coffee Latte", R.drawable.coffe, "21 Jan, 00:20 PM", "$232.50", "3 items"),
             ItemModel(namaMenu = "Strawberry Cheesecake", R.drawable.iconstraw, "03 Oct, 09:30 AM", "$90.90", "2 items"),
 
         )
-        val nBukuAdapter = ItemAdapter(listBuku)
+        val nBukuAdapter = ItemAdapter(listItem)
         recyclerView.apply {
             layoutManager = LinearLayoutManager(this@Order)
             adapter = nBukuAdapter

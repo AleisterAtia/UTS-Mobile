@@ -1,11 +1,13 @@
 package com.fadhiil2010.uts_mobile.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.fadhiil2010.uts_mobile.Detail
 import com.fadhiil2010.uts_mobile.Model.ItemModel
 import com.fadhiil2010.uts_mobile.Order
 import com.fadhiil2010.uts_mobile.R
@@ -31,6 +33,17 @@ class ItemAdapter(
         holder.txtTanggal.setText(currentItem.Tanggal)
         holder.txtharga.setText(currentItem.Harga)
         holder.txtItems.setText(currentItem.totalItem)
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, Detail::class.java).apply {
+                // Mengirim data melalui intent
+                putExtra("namaMakanan", currentItem.namaMenu)
+                putExtra("photoMakanan", currentItem.imageMenu)
+            }
+            context.startActivity(intent)
+        }
+
     }
 
     //membuat layout list item sebagai item dari recycle view

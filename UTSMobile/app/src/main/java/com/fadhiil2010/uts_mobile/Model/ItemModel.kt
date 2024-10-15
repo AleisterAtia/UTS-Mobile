@@ -6,4 +6,5 @@ data class ItemModel(
     var Tanggal :String,
     var Harga : String,
     var totalItem : String
+
 )
