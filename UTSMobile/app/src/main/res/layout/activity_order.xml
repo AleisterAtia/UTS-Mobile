@@ -28,45 +28,10 @@
         android:layout_marginTop="100dp"
         android:orientation="vertical">
 
-        <LinearLayout
+
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/curry"
-                android:layout_marginTop="30dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Chicke Curry"
-                android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:textSize="20dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="29 Nov, 01:20 PM"
-                android:textStyle="bold"
-                android:layout_marginTop="40dp"
-                android:textSize="20dp"/>
-
-
-
-
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/curry"
-            android:layout_marginTop="30dp"/>
-
-
+            android:id="@+id/rvOrder"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
